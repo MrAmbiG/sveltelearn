@@ -19,6 +19,34 @@
             "description": "Description 3"
         }
 ],
+
+    "most-active-stock": {
+        "symbol": "STOCK A",
+        "price": 351.0
+    },
+    "top-gaining-stock": {
+        "symbol": "STOCK B",
+        "price": 50.0
+    },
+    "top-losing-stock": {
+        "symbol": "STOCK C",
+        "price": 100.0
+    },
+    "stocks": [
+        {
+            "symbol": "STOCK D",
+            "price": 600.0
+        },
+        {
+            "symbol": "STOCK E",
+            "price": 100.0
+        },
+        {
+            "symbol": "STOCK F",
+            "price": 40.0
+        }
+    ],
+
 "postcodes":[
     {
     "postcode": "E3 4NA",
@@ -84,7 +112,26 @@
         "town": "postcode.post_town"
     }
 
-]
-
+],
+    "featured-products": [
+        {
+            "id":1,
+            "title":"Featured Product 1",
+            "price": 700,
+            "description": "Description 1"
+        },
+        {
+            "id": 2,
+            "title": "Featured Product 2",
+            "price": 1050,
+            "description": "Description 2"
+        },
+        {
+            "id": 3,
+            "title": "Featured Product 3",
+            "price": 2600,
+            "description": "Description 3"
+        }
+    ]
 
 }
