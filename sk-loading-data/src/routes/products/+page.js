@@ -12,3 +12,6 @@ export const load = async (loadEvent) => {
         notification
     }
 }
+
+export const ssr = true;
+export const csr = false;
