@@ -1,5 +1,10 @@
 
-export const load = () => {
+import { redirect } from "@sveltejs/kit";
+
+export const load = ({cookies, url}) => {
+    if (!cookies.get("username")) {
+        throw redirect(307, `/auth?redirectTo=${url.pathname}`);
+    }
     const newsAPIKey = 'YOUR_NEWS_API_KEY';
     console.log(newsAPIKey);
 
@@ -10,5 +15,6 @@ export const load = () => {
     ];
 
     return { news }
-}
+};
+
 

@@ -1,25 +1,16 @@
 
 <script>
-    let username='';
-    let password = '';
-    let message = '';
-    const handleSubmit=async()=>{
-        message='';
-        const response=await fetch('/auth',{
-            method:'POST',
-            body: JSON.stringify({
-                username,
-                password
-            })
-        });
-        const data=await response.json();
-        message=data.message;
-    };
+	import { enhance } from '$app/forms';
+    import { page } from '$app/stores'
+    export let form
+
+    const redirectTo = $page.url.searchParams.get('redirectTo') || '/'
 </script>
 
-<form on:submit|preventDefault={handleSubmit}>
-    <p>{message}</p>
-    <input type="text" name="username" placeholder="Username" bind:value={username}>
-    <input type="password" name="password" placeholder="Password" bind:value={password }>
+<form method="post" action="?/login&redirectTo={redirectTo}" use:enhance>
+    <p>{form?.message || ''}</p>
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
     <button type="submit">Login</button>
+    <button formaction="?/register$redirectTo={redirectTo}">Register</button>
 </form>
