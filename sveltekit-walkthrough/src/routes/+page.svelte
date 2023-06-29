@@ -1,2 +1,6 @@
-<h1>Welcome to SvelteKit walkthrough</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+
+<script>
+    import Hero from "./Hero.svelte";
+</script>
+<Hero />
+Home
