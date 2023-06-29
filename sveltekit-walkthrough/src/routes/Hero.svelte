@@ -13,7 +13,7 @@
 <style>
     .hero {
         padding: 5em 0;
-        background-color: cornflowerblue;
+        background-color: var(--primary-color);
         color: white;
     }
 
