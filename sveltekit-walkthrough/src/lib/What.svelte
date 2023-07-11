@@ -1,4 +1,7 @@
 
+<script>
+    import Button from "$lib/Button.svelte";
+</script>
 <div class="container grid">
     <div class="what">
         <h3>What We Do?</h3>
@@ -8,6 +11,7 @@
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ullam perferendis nesciunt explicabo, recusandae, quod inventore veritatis placeat saepe ut quo blanditiis sapiente qui consequatur sint excepturi eum impedit doloremque.
         </p>
+        <Button class="secondary" id="button" size="small">Call To Action >></Button>
     </div>
 
     <div class="contact">
