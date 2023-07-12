@@ -25,6 +25,11 @@
 
     ];
 
+    const setTheme = (theme) => {
+        document.documentElement.dataset.theme = theme;
+        document.cookie = `siteTheme=${theme};max-age=31536000;path="/"`;
+    };
+
     // let routeId;
     $: routeId = $page.route.id
     $: url = $page.url.href;
@@ -44,6 +49,12 @@
                     </a>
                 </li>
             {/each}
+            <li>
+                <a href={"#"} on:click={() => setTheme("dark")}>Dark</a>
+            </li>
+            <li>
+                <a href={"#"} on:click={() => setTheme("light")}>Light</a>
+            </li>
         </ul>
     </div>
 </nav>
